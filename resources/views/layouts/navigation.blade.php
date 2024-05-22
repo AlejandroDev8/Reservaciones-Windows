@@ -1,25 +1,82 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
+        <div class="flex justify-around h-16">
             <div class="flex">
                 <!-- Logo -->
+                @guest
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <x-nav-link href="{{ route('home') }}">
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
-                    </a>
-                </div>
-
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                @endguest
+                @auth
+                <div class="shrink-0 flex items-center">
+                    <x-nav-link href="{{ route('reservations.index') }}">
+                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                    </x-nav-link>
+                </div>
+                @endauth
+
+                <!-- Navigation Links -->
+
+                @guest
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('help.index')" :active="request()->routeIs('help.index')">
+                        <div class="flex justify-center items-center gap-2">
+                            <x-help />
+                            <p>Ayuda</p>
+                        </div>
+                    </x-nav-link>
+                    <x-nav-link :href="route('login')" :active="request()->routeIs('login')">
+                        {{ __('Iniciar Sesión') }}
+                    </x-nav-link>
+
+                    @if (Route::has('register'))
+                    <x-nav-link :href="route('register')" :active="request()->routeIs('register')">
+                        {{ __('Registrarse') }}
+                    </x-nav-link>
+                    @endif
+                </div>
+                @endguest
+
+                @auth
+                @if (auth()->user()->rol === 0)
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('reservations.index')" :active="request()->routeIs('reservations.index')">
+                        {{ __('Mis Solicitudes') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('reservations.create')"
+                        :active="request()->routeIs('reservations.create')">
+                        {{ __('Solicitar Reservación') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('help.users')" :active="request()->routeIs('help.users')">
+                        <div class="flex justify-center items-center gap-2">
+                            <x-help />
+                            <p>Ayuda</p>
+                        </div>
+                    </x-nav-link>
+                </div>
+                @else
+                <div class="hidden space-x-8 sm:-my-py sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('reservations.index')" :active="request()->routeIs('reservations.index')">
+                        {{ __('Todas las Solicitudes') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('help.index')" :active="request()->routeIs('help.index')">
+                        <div class="flex justify-center items-center gap-2">
+                            <x-help />
+                            <p>Ayuda</p>
+                        </div>
+                    </x-nav-link>
+                </div>
+                @endif
+                @endauth
             </div>
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
+                @auth
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button
@@ -39,7 +96,7 @@
 
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
+                            {{ __('Perfil') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->
@@ -48,11 +105,12 @@
 
                             <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                                {{ __('Cerrar Sesión') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
                 </x-dropdown>
+                @endauth
             </div>
 
             <!-- Hamburger -->
@@ -73,34 +131,76 @@
 
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
+        @guest
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+            <x-responsive-nav-link :href="route('help.index')" :active="request()->routeIs('help.index')">
+                <x-help />
+                <p> Ayuda</p>
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('login')" :active="request()->routeIs('login')">
+                {{ __('Iniciar Sesión') }}
+            </x-responsive-nav-link>
+
+            @if (Route::has('register'))
+            <x-responsive-nav-link :href="route('register')" :active="request()->routeIs('register')">
+                {{ __('Registrarse') }}
+            </x-responsive-nav-link>
+            @endif
+        </div>
+        @endguest
+        @auth
+        @if (auth()->user()->rol === 0)
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('help.users')" :active="request()->routeIs('help.users')">
+                <x-help />
+                <p> Ayuda</p>
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('reservations.index')"
+                :active="request()->routeIs('reservations.index')">
+                {{ __('Mis Solicitudes') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('reservations.create')"
+                :active="request()->routeIs('reservations.create')">
+                {{ __('Solicitar Reservación') }}
             </x-responsive-nav-link>
         </div>
+        @else
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('help.index')" :active="request()->routeIs('help.index')">
+                <x-help />
+                <p> Ayuda</p>
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('reservations.index')"
+                :active="request()->routeIs('reservations.index')">
+                {{ __('Todas las Solicitudes') }}
+            </x-responsive-nav-link>
+            @endif
+            @endauth
 
-        <!-- Responsive Settings Options -->
-        <div class="pt-4 pb-1 border-t border-gray-200">
-            <div class="px-4">
-                <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
-            </div>
+            <!-- Responsive Settings Options -->
+            @auth
+            <div class="pt-4 pb-1 border-t border-gray-200">
+                <div class="px-4">
+                    <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
+                    <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                </div>
 
-            <div class="mt-3 space-y-1">
-                <x-responsive-nav-link :href="route('profile.edit')">
-                    {{ __('Profile') }}
-                </x-responsive-nav-link>
-
-                <!-- Authentication -->
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-
-                    <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault();
-                                        this.closest('form').submit();">
-                        {{ __('Log Out') }}
+                <div class="mt-3 space-y-1">
+                    <x-responsive-nav-link :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">
+                        {{ __('Perfil') }}
                     </x-responsive-nav-link>
-                </form>
+
+                    <!-- Authentication -->
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+
+                        <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                            {{ __('Cerrar Sesión') }}
+                        </x-responsive-nav-link>
+                    </form>
+                </div>
             </div>
+            @endauth
         </div>
-    </div>
 </nav>
