@@ -17,6 +17,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/dashboard', [ReservationController::class, 'index'])->name('reservations.index');
     Route::get('/reservations/create', [ReservationController::class, 'create'])->name('reservations.create');
+    Route::get('/reservaciones/{reservacion}/aceptar-solicitud', [ReservationController::class, 'aceptarSolicitud'])->name('reservaciones.aceptar-solicitud');
+    Route::get('/reservaciones/{reservacion}/rechazar-solicitud', [ReservationController::class, 'rechazarSolicitud'])->name('reservaciones.rechazar-solicitud');
     Route::get('/help/users', [HelperController::class, 'users'])->name('help.users');
 });
 
