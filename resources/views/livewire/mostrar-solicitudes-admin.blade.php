@@ -35,11 +35,11 @@
                     </div>
                     @if ($solicitud->estado_id === 1)
                     <div class="mt-5 md:mt-0">
-                        <a href="{{route('reservaciones.aceptar', $solicitud->id)}}"
+                        <a href="{{route('reservaciones.aceptar-solicitud', $solicitud->id)}}"
                             class="items-center px-4 py-3 bg-indigo-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-indigo-700 focus:bg-indigo-700 active:bg-indigo-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150 block text-center">Ver
                             Solicitud (Aceptar Solicitud)
                         </a>
-                        <a href="{{route('reservaciones.rechazar', $solicitud->id)}}"
+                        <a href="{{route('reservaciones.rechazar-solicitud', $solicitud->id)}}"
                             class="mt-3 items-center px-4 py-3 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-700 focus:bg-red-700 active:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150 block text-center">Ver
                             Solicitud (Rechazar Solicitud)
                         </a>
