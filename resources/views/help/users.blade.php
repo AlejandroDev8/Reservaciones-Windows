@@ -28,36 +28,15 @@
                             3. Una vez que hayas llenado el formulario, da clic en el botón de "Enviar".
                         </p>
                         <h2 class="text-2xl font-bold">
-                            ¿Cómo puedo editar una reservación ya hecha?
+                            ¿Puedo editar una reservación ya hecha?
                         </h2>
                         <p class="text-sm text-gray-600 font-bold">
-                            Para editar una reservación ya hecha en el sistema de reservación de salas del Tecnologico
-                            Nacional de
-                            México, Campus Ciudad Valles debes seguir los siguientes pasos:
-                        </p>
-                        <p class="text-sm text-gray-500 font-bold">
-                            1. Dirigete a la sección de "Mis Reservaciones".
+                            No, no puedes editar una reservación ya hecha.
                         </p>
                         <p class="text-sm text-gray-600 font-bold">
-                            2. Busca la reservación que deseas editar y da clic en el botón de "Editar".
-                        </p>
-                        <p class="text-sm text-gray-500 font-bold">
-                            3. Modifica la información de la reservación y da clic en el botón de "Actualizar".
-                        </p>
-                        <h2 class="text-2xl font-bold">
-                            ¿Qué datos puedo actualizar de una reservación?
-                        </h2>
-                        <p class="text-sm text-gray-600 font-bold">
-                            Los datos que puedes actualizar de una reservación son los siguientes:
-                        </p>
-                        <p class="text-sm text-gray-500 font-bold">
-                            1. La sala a reservar.
-                        </p>
-                        <p class="text-sm text-gray-600 font-bold">
-                            2. Fecha de inicio y fecha de fin de la reservación.
-                        </p>
-                        <p class="text-sm text-gray-600 font-bold">
-                            3. Las especificaciones extras.
+                            Si deseas hacer cambios en una reservación ya hecha, tendrás que cancelarla y hacer una
+                            nueva
+                            reservación.
                         </p>
                         <h2 class="text-2xl font-bold">
                             ¿Cómo puedo cancelar una reservación?
