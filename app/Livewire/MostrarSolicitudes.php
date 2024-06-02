@@ -8,7 +8,7 @@ use Livewire\Component;
 class MostrarSolicitudes extends Component
 {
 
-    protected $listeners = ['eliminarSoliitud'];
+    protected $listeners = ['eliminarSolicitud'];
 
     public function eliminarSolicitud(Reservation $reservacion)
     {
