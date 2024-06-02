@@ -36,43 +36,17 @@ class ReservationController extends Controller
         return view('reservaciones.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function aceptarSolicitud(Reservation $reservacion)
     {
-        //
+        return view('admin.aceptarSolicitud', [
+            'reservacion' => $reservacion
+        ]);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function rechazarSolicitud(Reservation $reservacion)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return view('admin.rechazarSolicitud', [
+            'reservacion' => $reservacion
+        ]);
     }
 }
