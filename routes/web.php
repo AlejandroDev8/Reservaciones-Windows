@@ -1,13 +1,12 @@
 <?php
 
 use App\Http\Controllers\HelperController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', HomeController::class)->name('home');
 
 Route::get('/help', [HelperController::class, 'index'])->name('help.index');
 
