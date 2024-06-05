@@ -56,7 +56,7 @@
         <x-input-label for="extras" :value="__('Especificaciones extras')" />
         <textarea wire:model="extras" id="extras" cols="30" rows="10"
             class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-300 focus:ring-opacity-50 w-full"
-            placeholder="Especificacione extras para añadir a la sala (Limpieza, más sillas y/o mesas, etc..)"></textarea>
+            placeholder="Especificaciones extras para añadir a la sala (Limpieza, más sillas y/o mesas, etc..)"></textarea>
         @error('extras')
         <livewire:mostrar-alerta :message="$message" />
         @enderror
