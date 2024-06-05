@@ -66,6 +66,15 @@
                             fecha de incio o
                             fecha de fin, es porqué esa sala ya está reservada para esa fecha.
                         </p>
+                        <h2 class="text-2xl font-bold">¿Qué pasa si cambio mi correo electrónico?</h2>
+                        <p class="text-sm text-gray-600 font-bold">
+                            Si cambias tu correo electrónico, tendrás que verifcar tu cuenta nuevamente
+                        </p>
+                        <p class="text-sm text-gray-600 font-bold">
+                            A la hora de que cambies tu correo, aparecerá un texto, de que tu correo electrónico no ha
+                            sido
+                            verificado y te pedirá dar clic para enviarte un enlace de verificación a tu nuevo correo.
+                        </p>
                     </section>
                 </div>
             </div>
