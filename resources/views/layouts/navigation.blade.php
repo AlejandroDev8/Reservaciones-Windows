@@ -63,7 +63,7 @@
                     <x-nav-link :href="route('reservations.index')" :active="request()->routeIs('reservations.index')">
                         {{ __('Todas las Solicitudes') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('help.index')" :active="request()->routeIs('help.index')">
+                    <x-nav-link :href="route('help.admin')" :active="request()->routeIs('help.index')">
                         <div class="flex justify-center items-center gap-2">
                             <x-help />
                             <p>Ayuda</p>
@@ -166,7 +166,7 @@
         </div>
         @else
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('help.index')" :active="request()->routeIs('help.index')">
+            <x-responsive-nav-link :href="route('help.admin')" :active="request()->routeIs('help.index')">
                 <x-help />
                 <p> Ayuda</p>
             </x-responsive-nav-link>
