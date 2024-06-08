@@ -15,4 +15,9 @@ class HelperController extends Controller
     {
         return view('help.users');
     }
+
+    public function admin()
+    {
+        return view('help.admin');
+    }
 }

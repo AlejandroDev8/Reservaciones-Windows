@@ -19,6 +19,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/reservaciones/{reservacion}/aceptar-solicitud', [ReservationController::class, 'aceptarSolicitud'])->name('reservaciones.aceptar-solicitud');
     Route::get('/reservaciones/{reservacion}/rechazar-solicitud', [ReservationController::class, 'rechazarSolicitud'])->name('reservaciones.rechazar-solicitud');
     Route::get('/help/users', [HelperController::class, 'users'])->name('help.users');
+    Route::get('/help/admin', [HelperController::class, 'admin'])->name('help.admin');
 });
 
 require __DIR__ . '/auth.php';
