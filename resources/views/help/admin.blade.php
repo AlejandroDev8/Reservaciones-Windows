@@ -11,69 +11,19 @@
                     class="p-6 text-gray-900 bg-white md:flex lg:flex justify-between items-center text-wrap rounded-lg">
                     <section class="space-y-3 text-wrap">
                         <h2 class="text-2xl font-bold">
-                            ¿Cómo puedo reservar una sala?
+                            ¿Cómo acepto o rechazo una solicitude de reservación?
                         </h2>
                         <p class="text-sm text-gray-600 font-bold">
-                            Para reservar una sala en el sistema de reservación de salas del Tecnologico Nacional de
-                            México, Campus
-                            Ciudad Valles debes seguir los siguientes pasos:
-                        </p>
-                        <p class="text-sm text-gray-500 font-bold">
-                            1. Dirigete a la sección de "Solicitar Reservación".
+                            Para aceptar o rechzar una solicitud de reservación, en tu pestaña de "Todas las
+                            solicitudes", tendrás 2 botones, 1 de color azul y otro de color rojo.
                         </p>
                         <p class="text-sm text-gray-600 font-bold">
-                            2. Te aparecerá un formulario que tendrás que llenar con la información de la reservación.
-                        </p>
-                        <p class="text-sm text-gray-500 font-bold">
-                            3. Una vez que hayas llenado el formulario, da clic en el botón de "Enviar".
-                        </p>
-                        <h2 class="text-2xl font-bold">
-                            ¿Puedo editar una reservación ya hecha?
-                        </h2>
-                        <p class="text-sm text-gray-600 font-bold">
-                            No, no puedes editar una reservación ya hecha.
+                            El botón de color azul es para aceptar la solicitud de reservación y el botón de color rojo
+                            es para rechazar la solicitud de reservación.
                         </p>
                         <p class="text-sm text-gray-600 font-bold">
-                            Si deseas hacer cambios en una reservación ya hecha, tendrás que cancelarla y hacer una
-                            nueva
-                            reservación.
-                        </p>
-                        <h2 class="text-2xl font-bold">
-                            ¿Cómo puedo cancelar una reservación?
-                        </h2>
-                        <p class="text-sm text-gray-600 font-bold">
-                            Para cancelar una reservación en el sistema de reservación de salas del Tecnologico Nacional
-                            de México,
-                            Campus Ciudad Valles debes seguir los siguientes pasos:
-                        </p>
-                        <p class="text-sm text-gray-500 font-bold">
-                            1. Dirigete a la sección de "Mis Reservaciones".
-                        </p>
-                        <p class="text-sm text-gray-600 font-bold">
-                            2. Busca la reservación que deseas cancelar y da clic en el botón de "Cancelar".
-                        </p>
-                        <p class="text-sm text-gray-500 font-bold">
-                            3. Confirma la cancelación de la reservación.
-                        </p>
-                        <h2 class="text-2xl font-bold">
-                            ¿Puedo solicitar la misma sala para el mismo día?
-                        </h2>
-                        <p class="text-sm text-gray-600 font-bold">
-                            No, no puedes solicitar la misma sala para el mismo día.
-                        </p>
-                        <p class="text-sm text-gray-600 font-bold">
-                            Si a la hora de solicitar una sala en el formulario de reservación, sale un error en la
-                            fecha de incio o
-                            fecha de fin, es porqué esa sala ya está reservada para esa fecha.
-                        </p>
-                        <h2 class="text-2xl font-bold">¿Qué pasa si cambio mi correo electrónico?</h2>
-                        <p class="text-sm text-gray-600 font-bold">
-                            Si cambias tu correo electrónico, tendrás que verifcar tu cuenta nuevamente
-                        </p>
-                        <p class="text-sm text-gray-600 font-bold">
-                            A la hora de que cambies tu correo, aparecerá un texto, de que tu correo electrónico no ha
-                            sido
-                            verificado y te pedirá dar clic para enviarte un enlace de verificación a tu nuevo correo.
+                            Si das clic en el botón de color azul, la solicitud de reservación pasarás a una nueva
+                            pestaña donde verás toda la información de la solicitud de reservación.
                         </p>
                     </section>
                 </div>
