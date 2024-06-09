@@ -1,66 +1,116 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Reservaciones Tec-NM
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Tabla de Contenidos
 
-## About Laravel
+- [Reservaciones Tec-NM](#reservaciones-tec-nm)
+  - [Tabla de Contenidos](#tabla-de-contenidos)
+  - [Descripción](#descripción)
+    - [Pre-requisitos 📋](#pre-requisitos-)
+    - [Instalación 🔧](#instalación-)
+  - [Construido con 🛠️](#construido-con-️)
+  - [Capturas de pantalla](#capturas-de-pantalla)
+  - [Autores ✒️](#autores-️)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Descripción
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Este es un proyecto hecho para el Tecnológico Nacional de México, campus Ciudad Valles. El proyecto consiste en un sistema de reservaciones para salas, que en este caso son, "El auditorio", "Sala de Ex-Directores" y "Sala Rafael Piña".
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+El sistema permite a los usuarios registrarse, iniciar sesión, reservar una sala, ver las reservaciones que ha hecho y cancelarlas.
 
-## Learning Laravel
+### Pre-requisitos 📋
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Para poder correr el proyecto, necesitas tener instalado lo siguiente:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```php
+PHP ^8.2
+Composer ^2.6.5
+Laravel Installer ^5.1.3
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```js
+Node.js ^20.0.0
+NPM ^10.4.0
+```
 
-## Laravel Sponsors
+### Instalación 🔧
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Para instalar el proyecto, primero debes clonar el repositorio:
 
-### Premium Partners
+```bash
+git clone https://github.com/AlejandroDev8/Reservations.git
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Después, debes instalar las dependencias de PHP:
 
-## Contributing
+```bash
+composer install
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Después, debes instalar las dependencias de Node.js:
 
-## Code of Conduct
+```bash
+npm install
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Después, debes copiar el archivo `.env.example` y renombrarlo a `.env`:
 
-## Security Vulnerabilities
+```bash
+cp .env.example .env
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Después, debes generar la llave de la aplicación:
 
-## License
+```bash
+php artisan key:generate
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Después, debes crear la base de datos y configurar las credenciales en el archivo `.env`.
+
+Después, debes correr las migraciones:
+
+```bash
+php artisan migrate
+```
+
+Después, debes correr el servidor:
+
+```bash
+php artisan serve
+```
+
+Después, debes compilar los assets:
+
+```bash
+npm run dev
+```
+
+En este caso el proyecto cuenta con envio de correos electrónicos, por lo que debes configurar las credenciales de tu correo en el archivo `.env`.
+
+## Construido con 🛠️
+
+- [Laravel](https://laravel.com/) - El framework web usado.
+- [Tailwind CSS](https://tailwindcss.com/) - El framework de CSS usado.
+- [Alpine.js](https://alpinejs.dev/) - El framework de JavaScript usado.
+- [Livewire](https://laravel-livewire.com/) - El framework de PHP usado.
+- [Breeze](https://laravel.com/docs/11.x/starter-kits#laravel-breeze) - El starter kit usado.
+- [PostgreSQL](https://www.postgresql.org/) - La base de datos usada.
+- [Node.js](https://nodejs.org/) - El entorno de ejecución de JavaScript usado.
+- [NPM](https://www.npmjs.com/) - El manejador de paquetes usado.
+
+## Capturas de pantalla
+
+Aquí hay algunas capturas de pantalla de la aplicación:
+
+![Página de inicio](/public/img/readme/Captura%20de%20pantalla%20(93).png)
+
+![Dashboard de usuario](/public/img/readme/Captura%20de%20pantalla%20(94).png)
+
+![Página para hacer un reservación](/public/img/readme/Captura%20de%20pantalla%20(95).png)
+
+![Dashboard del administrador](/public/img/readme/Captura%20de%20pantalla%20(96).png)
+
+## Autores ✒️
+
+- **Alejandro Olvera Delgado** - *Desarrollador* - [AlejandroDev8](https://github.com/AlejandroDev8)
+- **Xally Martínez Trejo** - *Desarrollador* - [XallyMartinez](https://github.com/20690080xallytrejo)
+- **Alexis Ponce González** - *Desarrollador* - [AlexisPonceG](https://github.com/PONCE2602)
