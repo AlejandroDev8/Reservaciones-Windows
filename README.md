@@ -7,6 +7,7 @@
   - [Descripción](#descripción)
     - [Pre-requisitos 📋](#pre-requisitos-)
     - [Instalación 🔧](#instalación-)
+  - [Uso 🚀](#uso-)
   - [Construido con 🛠️](#construido-con-️)
   - [Capturas de pantalla](#capturas-de-pantalla)
   - [Autores ✒️](#autores-️)
@@ -64,7 +65,7 @@ Después, debes generar la llave de la aplicación:
 php artisan key:generate
 ```
 
-Después, debes crear la base de datos y configurar las credenciales en el archivo `.env`.
+Después, debes crear la base de datos, que en este caso se está usando `PostgreSQL` y configurar las credenciales en el archivo `.env`.
 
 Después, debes correr las migraciones:
 
@@ -85,6 +86,25 @@ npm run dev
 ```
 
 En este caso el proyecto cuenta con envio de correos electrónicos, por lo que debes configurar las credenciales de tu correo en el archivo `.env`.
+
+## Uso 🚀
+
+Una vez que hayas instalado y configurado correctamente todo, puedes correr el servidor y acceder a la aplicación en tu navegador.
+
+```bash
+php artisan serve
+npm run dev
+```
+
+1. Abre tu navegador y ve a <http://localhost:8000> (o la URL que te proporcionó el comando anterior).
+
+2. Regístrate o inicia sesión en la aplicación.
+
+3. Una vez que hayas iniciado sesión, podrás reservar una sala seleccionando la opción 'Solicitar Reservación' en el menú.
+
+4. Para ver tus reservaciones, selecciona 'Mis Solicitudes' en el menú.
+
+5. Si necesitas eliminar una reservación, puedes hacerlo desde la sección 'Mis Solicitudes'.
 
 ## Construido con 🛠️
 
