@@ -38,7 +38,7 @@ NPM ^10.4.0
 Para instalar el proyecto, primero debes clonar el repositorio:
 
 ```bash
-git clone [https://github.com/AlejandroDev8/Reservations.git](https://github.com/AlejandroDev8/Reservaciones-Windows.git)
+git clone https://github.com/AlejandroDev8/Reservaciones-Windows.git
 ```
 
 Después, debes instalar las dependencias de PHP:
